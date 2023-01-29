@@ -34,7 +34,7 @@ export default function TextArea(props) {
     };
 
 
-    let len = text.split(" ").length;
+    let len = text.split(" ").filter((ele) => {return ele.length !== 0}).length;
 
     return (
         <>
