@@ -1,9 +1,14 @@
 import Navbar from "./components/Navbar.js";
 import TextArea from "./components/TextArea.js";
 import React, { useState } from 'react';
-import Alert from "./Alert.js";
+import Alert from "./components/Alert.js";
+import About from "./components/About.js";
+import { BrowserRouter as Router,
+Switch,
+Route,
+Link
+} from "react-router-dom";
 
-// import About from "./components/About.js";
 
 function App() {
     const [mode,setMode] = useState("light");
@@ -40,9 +45,9 @@ function App() {
           <div className="container" >
             <TextArea heading="Enter the Text here" setAlert={setAlert} mode={mode}/>
           </div>
-          {/* <div className="container">
+          <div className="container">
             <About/>
-          </div> */}
+          </div>
         </>
     );
 }
